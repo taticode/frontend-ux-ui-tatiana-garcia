@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+  /* Fuentes */
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --default-font-family: var(--font-inter); 
+
+  /* Colores */
+  --color-brand-primary-beige: #FEFAF2;
+  --color-brand-primary-brown: #E5DACD;
+  --color-brand-primary-green: #DEE8D6;
+  --color-brand-primary-orange: #FFD7B9;
+  --color-brand-secondary-rose: #ffcfd1;
+
+  --color-brand-text-black: #333;
+  --color-brand-text-white: #FEFDFD;
+  --color-brand-text-brown: #4B4033;
+  --color-brand-text-green: #84A98C;
+
+  --color-brand-background-global: var(--color-brand-primary-beige);
+  --color-brand-background-brown: var(--color-brand-primary-brown);
+  --color-brand-background-green: var(--color-brand-primary-green);
+  --color-brand-background-orange: var(--color-brand-primary-orange);
+
+  --color-brand-border-brown: #B8A48B;
+
+  --shadow-brand: 4px 4px 20px 0px rgba(184, 164, 139, 0.4);
+  --image-header-hero: url('assets/images/hero-image-40.png');
+}
+
+/* --- UTILITIES --- */
+
+@utility text-shadow-bold {
+  text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor;
+  transition: all .2s;
+}
+
+@utility gradient-orange-green {
+  background: linear-gradient(to bottom, transparent 0%, var(--color-brand-background-orange) 25%, var(--color-brand-background-green) 75%, transparent 100%);
+}
+
+@utility gradient-transparent-global {
+  background: linear-gradient(to bottom, transparent 0%, var(--color-brand-background-global) 100%);
+}
+
+@utility main-animation {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- BASE --- */
+@layer base {
+  html, body {
+    font-family: var(--font-inter);
+    scroll-behavior: smooth;
+    color: var(--color-brand-text-black);
+    background-color: var(--color-brand-background-global);
+    margin: 0;
+  }
+  h1, h3, h4, h5, h6 { font-family: var(--font-inter); }
+  h2, p { font-family: var(--font-jetbrains); }
+  section { scroll-margin-top: 4rem; }
+  button { transition: font-weight 0.2s ease, border-color 0.3s ease; }
+}
+
+/* --- CAMBIO DE ICONO BURGUER A CROSS --- */
+.menu-btn{
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--font-color);
+    @include flexible(flex, row, nowrap, center, center ); 
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .menu-btn{
+
+  #barras{
+          display: none;
+  }
+  #cerrar{
+          display: block;
+  }
+}
+
+/* --- COMPONENTES GLOBALES --- */
+.header {
+  position: relative;
+  background-image: var(--image-header-hero);
+  @apply bg-cover bg-no-repeat bg-center;
+  &::after {
+    content: '';
+    position: absolute; left: 0; bottom: 0;
+    width: 100%; height: 40px;
+    @apply gradient-transparent-global;
+  }
+}
+
+.main-button {
+  @apply inline-flex items-center text-sm box-border border rounded-xl px-4 py-2.5 leading-5 
+         focus:outline-none focus:ring-1 hover:text-shadow-bold hover:bg-brand-background-brown;
+}
+
+.badge-pill {
+  @apply text-sm font-medium px-3 py-1 rounded-full leading-normal text-brand-text-brown bg-brand-background-brown;
+}
+
+.clickable-card {
+  @apply block rounded-2xl overflow-hidden box-border bg-brand-text-white border border-brand-background-brown main-animation;
+
+  &:hover {
+    @apply cursor-pointer border-brand-text-green scale-[1.01] -translate-y-1 shadow-brand flex flex-col;
+  }
+  
+  &:hover * {
+    @apply cursor-pointer;
+  }
+
+  &.brown {
+    @apply bg-brand-background-brown;
+    &:hover {
+      @apply border-brand-border-brown shadow-brand;
+    }
+  }
+}
+
+/* --- ACCORDION EXPERIENCE --- */
+#accordion-experience [id^="body-"] {
+  @apply grid opacity-0 invisible;
+  grid-template-rows: 0fr; 
+  transition: grid-template-rows 0.3s ease-in-out, opacity 0.3s ease, visibility 0.3s;
+}
+
+#accordion-experience [id^="body-"]:not(.hidden) {
+  @apply opacity-100 visible;
+  grid-template-rows: 1fr;
+}
+
+#accordion-experience [id^="body-"] > div {
+  @apply min-h-0 p-0;
+  transition: padding 0.3s ease-in-out;
+}
+
+#accordion-experience [id^="body-"]:not(.hidden) > div {
+  @apply py-5 px-6; 
+}
+
+/* --- TIMELINE DECORATION --- */
+#accordion-experience { @apply overflow-visible; }
+
+.timeline-dot {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 z-10 rounded-full border-2 border-brand-text-white;
+  background-color: var(--color-brand-background-orange);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+article:has(button[aria-expanded="true"]) .timeline-dot {
+  @apply bg-brand-text-white border-brand-text-white scale-125;
+  box-shadow: 0 0 20px 4px var(--color-brand-text-white), 0 0 0 2px var(--color-brand-background-orange);
+}
+
+.timeline-line {
+  @apply w-0.5 opacity-40 h-full;
+  background-color: var(--color-brand-background-orange);
+}
+
+article.first-item .timeline-line { @apply h-1/2 self-end; }
+article.last-item .timeline-line { @apply h-1/2 self-start; }
+
+/* --- RESPONSIVE MÓVIL --- */
+@media (max-width: 768px) {
+  #accordion-experience article { 
+    @apply grid-cols-1 gap-0; 
+  }
+
+  .timeline-dot, 
+  .timeline-line, 
+  article div.relative.flex.justify-center.w-8 { 
+    @apply hidden; 
+  }
+
+  #accordion-experience article header {
+    @apply w-full justify-start pt-6 pb-4 pl-1 px-0 order-1;
+  }
+
+  #accordion-experience article section {
+    @apply p-0 w-full order-2;
+  }
+
+  .clickable-card button { 
+    @apply p-4; 
+  }
+}

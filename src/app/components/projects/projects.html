@@ -1,0 +1,31 @@
+
+
+<section id="projects" class="w-full max-w-7xl mx-auto px-6">
+    <h3 class="text-4xl w-full pt-8 pb-6">{{'projectsTitle' | translate}}</h3>
+    <main  class="relative py-8 w-full grid md:grid-cols-3 sm:grid-cols-2 gap-4"> 
+
+        @for (project of projectList; track project.title) {
+            <article class="clickable-card">
+                <img class=" w-full h-48 object-cover" [src]="project.thumbnail" [alt]="project.title" />
+                
+                <section class="bg-brand-text-white  px-6 py-8">
+                    <h5 class="mb-2 font-semibold tracking-tight text-lg">
+                        {{ project.title }}
+                    </h5>
+                    
+                    <p class="mb-6 text-base">
+                        {{ project.description }}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        @for (tag of project.tags; track tag) {
+                            <span class="badge-pill">{{ tag }}</span>
+                        }
+                    </div>
+                </section>
+            </article>
+        } @empty {
+            <p class="mb-6 text-base">{{'projectsEmpty' |translate}}</p>
+        }
+    </main>
+</section>
