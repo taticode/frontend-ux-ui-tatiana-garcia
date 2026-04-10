@@ -1,59 +1,42 @@
-# MiPortfolio
+# Frontend Developer & UX/UI Designer | Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+This is my professional portfolio, built with a focus on **clean architecture**, **responsive design**, and **modern CSS workflows**. It showcases my ability to bridge the gap between complex design requirements and high-performance frontend code.
 
-## Development server
+🚀 **[Live Demo](https://taticode.github.io/frontend-ux-ui-tatiana-garcia/)**
 
-To start a local development server, run:
+---
 
+## ⚡ Tech Stack & Highlights
+
+* **Framework:** **Angular 18** (using Standalone Components & Signal-ready patterns).
+* **Styling:** **Tailwind CSS 4.0** (utilizing advanced `@theme` configuration and CSS variables).
+* **UI/UX:** **Flowbite** integration for accessible, high-fidelity components.
+* **Best Practices:** Semantic HTML5, Mobile-First approach, and performance optimization.
+
+---
+
+## 🛠️ Key Technical Implementations
+
+### 1. Advanced CSS & Theming
+Instead of standard utility-first styling, I implemented a **centralized design system** using Tailwind 4's new engine. This allows for:
+* Dynamic theme switching via CSS variables.
+* Custom `@utility` definitions for reusable animations and complex gradients.
+
+### 2. Interactive Experience Timeline
+I developed a custom **Accordion-Timeline** component that features:
+* Smooth height transitions using `grid-template-rows: 0fr -> 1fr` (the gold standard for CSS transitions on unknown heights).
+* State-driven UI feedback based on Angular's attribute binding.
+
+### 3. Responsive Component Architecture
+The application is built with a **modular approach**, ensuring that components like the `clickable-card` and `navigation-menu` are decoupled, reusable, and fully responsive across all breakpoints.
+
+---
+
+## 📦 Project Setup & Deployment
+
+Designed to be easily auditable by technical leads:
+
+**Development Server:**
 ```bash
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
