@@ -5,7 +5,7 @@
     <main  class="relative py-8 w-full grid md:grid-cols-3 sm:grid-cols-2 gap-4"> 
 
         @for (project of projectList; track project.title) {
-            <article class="clickable-card">
+            <article class="clickable-card hover:cursor-default">
                 <img class=" w-full h-48 object-cover" [src]="project.thumbnail" [alt]="project.title" />
                 
                 <section class="bg-brand-text-white  px-6 py-8">
@@ -22,7 +22,15 @@
                             <span class="badge-pill">{{ tag }}</span>
                         }
                     </div>
+                    @if (project.link || project.gitRepo) {
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <a class="main-button hover:cursor-pointer" [href]="project.link"  target="_blank" rel="noopener" rel="noreferrer" rel="nofollow" > {{project.buttonDemo}}</a>
+                            <a class="main-button hover:cursor-pointer" [href]="project.gitRepo"  target="_blank" rel="noopener" rel="noreferrer" rel="nofollow" > {{project.buttonGit}}</a>
+                        </div>
+                    }
+
                 </section>
+
             </article>
         } @empty {
             <p class="mb-6 text-base">{{'projectsEmpty' |translate}}</p>

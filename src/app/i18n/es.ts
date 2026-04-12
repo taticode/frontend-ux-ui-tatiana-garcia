@@ -9,33 +9,43 @@ hero: {
     title: '¡Hola! Soy ',
     nameSpan: 'Tatiana García',
     job: 'Frontend developer con conocimientos UX/UI',
-    subtitle: 'Desarrollo aplicaciones en Angular con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario',
+    subtitle: 'Desarrollo aplicaciones web con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario',
     buttonProjects: 'Ver Proyectos'
 },
 projectsTitle: 'Proyectos',
 projects :[
 
 {   
-    thumbnail:'assets/images/nana.png',
-    title: `Primer proyecto`,
-    description: 'Aquí se incluye la descripción del proyecto en cuestión, una app propia hecha con angular, tailwind y css. Con control de versiones en git',
-    tags: ['Angular','Tailwind','UX/UI','Figma'],
-    button: 'Detalles'
+    thumbnail:'assets/images/memory.png',
+    title: `Memory cards`,
+    description: 'Juego de cartas por parejas para aprender vocabulario en inglés sobre comida, objetos o lugares',
+    tags: ['Javascript', 'css3'],
+    buttonDemo: 'Demo',
+    link: 'https://taticode.github.io/memory-game/',
+    buttonGit: 'Github',
+    gitRepo: 'https://github.com/taticode/memory-game?tab=readme-ov-file'
 },
 {
     thumbnail:'assets/images/myaura.png',
-    title: 'Segundo proyecto',
-    description: 'Aquí se incluye la descripción del proyecto en cuestión, una app propia hecha con angular, tailwind y css. Con control de versiones en git',
-    tags: ['Angular','Tailwind','UX/UI','Figma'],
-    button: 'Detalles'
+    title: 'Proyecto futuro',
+    description: 'Aquí podrás ver los futuros proyectos que iré publicando',
+    tags: ['tecnologías'],
+    buttonDemo: '',
+    link: '',
+    buttonGit: '',
+    gitRepo: ''
 },
 {
-    thumbnail:'assets/images/ecomarket.png',
-    title: 'Tercer proyecto',
-    description: 'Aquí se incluye la descripción del proyecto en cuestión, una app propia hecha con angular, tailwind y css. Con control de versiones en git',
-    tags: ['Angular','Tailwind','UX/UI','Figma'],
-    button: 'Detalles'
-}
+    thumbnail:'assets/images/myaura.png',
+    title: 'Proyecto futuro',
+    description: 'Aquí podrás ver los futuros proyectos que iré publicando',
+    tags: ['tecnologías'],
+    buttonDemo: '',
+    link: '',
+    buttonGit: '',
+    gitRepo:''
+},
+
 ],
 projectsEmpty: 'No hay proyectos que mostrar',
 positionsTitle: 'Formación y Experiencia',
@@ -180,7 +190,7 @@ courses: [
 ],
 positionsEmpty: 'No hay empleos que mostrar',
 contactTitle: 'Contacto',
-contactSubtitle: 'Si estás buscando un perfil híbrido para tu proyecto, puedes escribirme por Linkedin',
+contactSubtitle: 'Si estás buscando un perfil híbrido para tu proyecto, puedes escribirme a mi mail tatiana.gl.3011@gmail.com o por Linkedin',
 footerClaim1: 'Este portfolio se ha hecho con mucho',
 footerClaim2: 'Y mucho té verde',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - Todos los derechos reservados - En esta web no se recoge ningún dato personal de usuarios'

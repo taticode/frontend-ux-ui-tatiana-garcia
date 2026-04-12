@@ -16,27 +16,36 @@ hero: {
 projectsTitle: 'Projects',
 projects :[
 
-    {   
-        thumbnail:'assets/images/nana.png',
-        title: `Nana's Lab`,
-        description: 'English version',
-        tags: ['Angular','Tailwind','UX/UI','Figma'],
-        button: 'Details'
-    },
-    {
-        thumbnail:'assets/images/myaura.png',
-        title: 'My Aura',
-        description: 'English version',
-        tags: ['Angular','Tailwind','UX/UI','Figma'],
-        button: 'Details'
-    },
-    {
-        thumbnail:'assets/images/ecomarket.png',
-        title: 'EcoMarket',
-        description: 'English version',
-        tags: ['Angular','Tailwind','UX/UI','Figma'],
-        button: 'Details'
-    },
+  {   
+    thumbnail:'assets/images/memory.png',
+    title: `Memory cards`,
+    description: 'A card game for pairs to learn vocabulary in English about food, objects, or places.',
+    tags: ['Javascript', 'css3'],
+    buttonDemo: 'Demo',
+    link: 'https://taticode.github.io/memory-game/',
+    buttonGit: 'Github',
+    gitRepo: ''
+},
+{
+    thumbnail:'assets/images/myaura.png',
+    title: 'Future project',
+    description: 'Here you can see the future projects that I will be publishing.',
+    tags: ['tech'],
+    buttonDemo: '',
+    link:'',
+    buttonGit: '',
+    gitRepo:''
+},
+{
+    thumbnail:'assets/images/myaura.png',
+    title: 'Future project',
+    description: 'Here you can see the future projects that I will be publishing.',
+    tags: ['tech'],
+    buttonDemo: '',
+    link: '',
+    buttonGit: '',
+    gitRepo: ''
+},
 ],
 projectsEmpty: 'There are no projects to show',
 positionsTitle: 'Studies and Experience',
@@ -182,7 +191,7 @@ courses: [
 ],
 positionsEmpty: 'No jobs to display',
 contactTitle: 'Contact',
-contactSubtitle: `If you're looking for a hybrid profile for your project, you can contact me via LinkedIn.`,
+contactSubtitle: `If you're looking for a hybrid profile for your project, you can contact me by email tatiana.gl.3011@gmail or through LinkedIn.`,
 footerClaim1: 'This portfolio was made with love',
 footerClaim2: 'And a lot of green tea',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - All rights reserved - This website does not collect any personal data from users'
