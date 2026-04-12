@@ -8,7 +8,7 @@ This is my professional portfolio, built with a focus on **clean architecture**,
 
 ## ⚡ Tech Stack & Highlights
 
-* **Framework:** **Angular 18** (using Standalone Components & Signal-ready patterns).
+* **Framework:** **Angular 21** (using Standalone Components & Signal-ready patterns).
 * **Styling:** **Tailwind CSS 4.0** (utilizing advanced `@theme` configuration and CSS variables).
 * **UI/UX:** **Flowbite** integration for accessible, high-fidelity components.
 * **Best Practices:** Semantic HTML5, Mobile-First approach, and performance optimization.

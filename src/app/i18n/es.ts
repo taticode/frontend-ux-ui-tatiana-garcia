@@ -66,7 +66,7 @@ positions: [
       'Implementación con Foundation for Emails y SCSS. Aseguramiento de la consistencia visual con las guías de marca.'
     ],
     startDate: 'Junio 2023',
-    endDate: 'Julio 2023'
+    endDate: 'Diciembre 2023'
   },
   {
     type: 'job',
@@ -78,20 +78,8 @@ positions: [
       'Mejora de la coherencia visual y usabilidad en productos B2B.',
       'Control de versiones con Git, trabajando bajo metodologías Agile.'
     ],
-    startDate: 'Mayo 2021',
+    startDate: 'Abril 2021',
     endDate: 'Junio 2022'
-  },
-  {
-    type: 'job',
-    company: 'Zeeker Solutions',
-    rol: 'Maquetadora Frontend',
-    description: [
-      'Desarrollo de interfaces responsive y accesibles con Angular y SCSS.',
-      'Creación de componentes personalizados y mantenimiento del estilo visual.',
-      'Control de versiones con Git en entornos de trabajo compartidos.'
-    ],
-    startDate: 'Mayo 2020',
-    endDate: 'Enero 2021'
   },
   {
     type: 'job',
@@ -102,8 +90,20 @@ positions: [
       'Mejora de la accesibilidad (WCAG) y del rendimiento visual.',
       'Refactorización de componentes y resolución de incidencias.'
     ],
+    startDate: 'Mayo 2020',
+    endDate: 'Enero 2021'
+  },
+    {
+    type: 'job',
+    company: 'Zeeker Solutions',
+    rol: 'Maquetadora Frontend',
+    description: [
+      'Desarrollo de interfaces responsive y accesibles con Angular y SCSS.',
+      'Creación de componentes personalizados y mantenimiento del estilo visual.',
+      'Control de versiones con Git en entornos de trabajo compartidos.'
+    ],
     startDate: 'Agosto 2019',
-    endDate: 'Abril 2020'
+    endDate: 'Noviembre 2019'
   },
   {
     type: 'job',
@@ -125,7 +125,7 @@ positions: [
       'Optimización de la experiencia de usuario y coherencia visual en la web principal.'
     ],
     startDate: 'Febrero 2017',
-    endDate: 'Agosto 2017'
+    endDate: 'Julio 2017'
   }
 ],
 courses: [
