@@ -2,7 +2,7 @@
 
 This is my professional portfolio, built with a focus on **clean architecture**, **responsive design**, and **modern CSS workflows**. It showcases my ability to bridge the gap between complex design requirements and high-performance frontend code.
 
-🚀 **[Live Demo](https://taticode.github.io/frontend-ux-ui-tatiana-garcia/)**
+<a href="https://taticode.github.io/frontend-ux-ui-tatiana-garcia/" target="_blank">🚀 <b>Live Demo</b></a>
 
 ---
 
