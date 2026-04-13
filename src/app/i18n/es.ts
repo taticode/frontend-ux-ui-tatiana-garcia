@@ -190,7 +190,7 @@ courses: [
 ],
 positionsEmpty: 'No hay empleos que mostrar',
 contactTitle: 'Contacto',
-contactSubtitle: 'Si estás buscando un perfil híbrido para tu proyecto, puedes escribirme a mi mail tatiana.gl.3011@gmail.com o por Linkedin',
+contactSubtitle: 'Si estás buscando un perfil híbrido para tu proyecto, puedes escribirme a mi mail tatianagarcia.dev@gmail.com o por Linkedin',
 footerClaim1: 'Este portfolio se ha hecho con mucho',
 footerClaim2: 'Y mucho té verde',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - Todos los derechos reservados - En esta web no se recoge ningún dato personal de usuarios'

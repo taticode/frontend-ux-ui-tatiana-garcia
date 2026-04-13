@@ -191,7 +191,7 @@ courses: [
 ],
 positionsEmpty: 'No jobs to display',
 contactTitle: 'Contact',
-contactSubtitle: `If you're looking for a hybrid profile for your project, you can contact me by email tatiana.gl.3011@gmail or through LinkedIn.`,
+contactSubtitle: `If you're looking for a hybrid profile for your project, you can contact me by email tatianagarcia.dev@gmail.com or through LinkedIn.`,
 footerClaim1: 'This portfolio was made with love',
 footerClaim2: 'And a lot of green tea',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - All rights reserved - This website does not collect any personal data from users'
