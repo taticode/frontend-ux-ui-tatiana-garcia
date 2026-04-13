@@ -98,7 +98,13 @@
 
 .main-button {
   @apply inline-flex items-center text-sm box-border border rounded-xl px-4 py-2.5 leading-5 
-         focus:outline-none focus:ring-1 hover:text-shadow-bold hover:bg-brand-background-brown;
+         transition-all duration-300 ease-in-out
+         focus:outline-none focus:ring-1 hover:bg-brand-background-brown;
+
+  &:hover {
+    @apply -translate-y-1 scale-[1.02] shadow-lg;
+    
+  }
 }
 
 .badge-pill {
@@ -116,11 +122,8 @@
     @apply cursor-pointer;
   }
 
-  &.brown {
-    @apply bg-brand-background-brown;
-    &:hover {
-      @apply border-brand-border-brown shadow-brand;
-    }
+  &.green {
+    @apply bg-brand-primary-green;
   }
 }
 

@@ -1,99 +1,4 @@
-<!-- 
-<section id="experience" class="section-gradient w-full">
-    <div class=" max-w-7xl mx-auto w-full py-8 px-6">
-        <h3 class="text-4xl w-full pt-8 pb-6">{{'positionsTitle' | translate}}</h3>
 
-       <main  class="relative w-full py-8 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4"> 
-
-        @for (job of jobsList; track job.company) {
-            <article class="decorated-card">
-
-                <section class="card-wrap pl-4">
-                    <div class="card-heading">
-                        <h5 class="mb-2 text-base font-semibold tracking-tight text-heading">
-                        {{ job.company }}
-                        </h5>
-                    
-                    <p class="mb-6 text-base brand-text-green">
-                        {{ job.rol }}
-                    </p>
-                    </div>
-                
-
-                    @for (parrafo of job.description; track parrafo) {
-                        <p class="mb-6 text-base">{{ parrafo }}</p>
-                    }
-                </section>
-            </article>
-        } @empty {
-            <p class="mb-6 text-base">{{'positionsEmpty'|translate}}</p>
-        }
-    </main>
-    </div>
-</section>
-
-    ____________________________________FORMATO TARJETAS-----------------------------
-</div> -->
-
-
-<!-- ____________________________________FORMATO TIMELINE SÓLO EMPLEOS-----------------------------
-<section id="experience" class="section-gradient w-full">
-  <div class="max-w-7xl mx-auto w-full py-8 px-6">
-    <h3 class="text-4xl w-full pt-8 pb-6">{{ 'positionsTitle' | translate }}</h3>
-
-    <main class="shadow-sm bg-white rounded-2xl" data-accordion="collapse" initFlowbite>
-      
-      @for (job of jobsList; track job.company; let i = $index) {
-        <article class="decorated-card p-0 overflow-visible">
-          <div class="pl-4 relative ">
-            
-            <h2 [id]="'accordion-heading-' + i">
-              <button 
-                type="button" 
-                class="flex items-center justify-between w-full pt-6 pr-6 font-medium text-left gap-3 group  hover:cursor-pointer" 
-                [attr.data-accordion-target]="'#accordion-body-' + i" 
-                aria-expanded="false" 
-                [attr.aria-controls]="'accordion-body-' + i">
-                
-                <div class="flex flex-col">
-                  <span class="text-xl font-bold text-heading group-hover:text-brand-text-green   transition-colors">
-                    {{ job.company }}
-                  </span>
-                  <span class="text-sm brand-text-green font-medium">
-                    {{ job.rol }}
-                  </span>
-                </div>
-
-                <svg data-accordion-icon class="w-4 h-4 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
-                </svg>
-              </button>
-            </h2>
-
-            <div 
-              [id]="'accordion-body-' + i" 
-              class="hidden" 
-              [attr.aria-labelledby]="'accordion-heading-' + i">
-              
-              <div class="py-6 pr-6">
-                @for (parrafo of job.description; track $index) {
-                  <p class="mb-4 text-base text-sm leading-relaxed last:mb-0">
-                    {{ parrafo }}
-                  </p>
-                }
-              </div>
-            </div>
-
-          </div>
-        </article>
-      } @empty {
-        <p class="mb-6 text-base">{{ 'positionsEmpty' | translate }}</p>
-      }
-    </main>
-  </div>
-
-  
-</section> -->
 
 <section id="experience" class="w-full bg-brand-background-global">
   <div class="max-w-7xl mx-auto py-8 px-6">
@@ -114,7 +19,7 @@
       }
     </div>
 
-    <div id="accordion-experience" data-accordion="collapse" class="max-w-5xl mx-auto relative">
+    <div id="accordion-experience" data-accordion="collapse" class="max-w-7xl mx-auto relative">
       
       @for (item of timelineList(); track $index; let first = $first; let last = $last) {
         <article class="grid grid-cols-[1fr_auto_2fr] w-full group overflow-visible"
@@ -133,7 +38,7 @@
           </div>
 
           <section class="pl-10 md:pl-4 py-4">
-            <div class="clickable-card" [class.brown]="item.type === 'course'">
+            <div class="clickable-card" [class.green]="item.type === 'course'">
               
               <h2 [id]="'heading-' + $index" class="m-0">
                 <button type="button" 
@@ -143,7 +48,7 @@
                   
                   <span class="font-bold text-brand-text-black leading-tight">
                     {{ item.company }} 
-                    <span class="hidden md:inline font-light text-brand-background-brown mx-2">|</span> 
+                    <span class="hidden md:inline font-light text-brand-background-green mx-2">|</span> 
                     <span class="block md:inline text-sm font-medium text-brand-text-black">{{ item.rol }}</span>
                   </span>
 
