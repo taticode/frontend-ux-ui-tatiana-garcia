@@ -5,10 +5,11 @@
         @for (project of projectList; track project.title) {
             <article class="overflow-hidden bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg flex flex-col h-full">
                 <div class="relative w-full aspect-video overflow-hidden bg-[#FAF7ED]">
-                        <img 
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                            [src]="project.thumbnail" 
-                            [alt]="project.title" 
+                        <img
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                            [src]="project.thumbnail"
+                            [alt]="project.title"
+                            loading="lazy"
                         />
                 
                 </div>

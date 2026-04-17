@@ -1,0 +1,13 @@
+node_modules/
+.git/
+.angular/
+dist/
+.vscode/
+package-lock.json
+*.log
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico

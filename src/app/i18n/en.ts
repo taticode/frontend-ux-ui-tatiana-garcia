@@ -58,7 +58,7 @@ projects :[
     buttonDemo: 'Demo',
     link: 'https://taticode.github.io/memory-game/',
     buttonGit: 'Github',
-    gitRepo: ''
+    gitRepo: 'https://github.com/taticode/memory-game'
 },
 {
     thumbnail:'assets/images/myaura.png',
