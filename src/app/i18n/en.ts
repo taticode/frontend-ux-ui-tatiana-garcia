@@ -13,6 +13,40 @@ hero: {
     subtitle: 'I build angular apps focused on clean architecture, accesibility and great user experience',
     buttonProjects: 'Projects'
 },
+aboutMeTitle: 'About me',
+aboutMe: [
+  {
+    "title": "AI Integration",
+    "description": "Productivity optimization by integrating generative AI throughout the entire design and development lifecycle.",
+    "icons": ["chatgpt", "gemini", "claude"]
+  },
+  {
+    "title": "Frontend Architecture",
+    "description": "Building robust and scalable applications through strict typing and the most powerful frameworks in the current ecosystem.",
+    "icons": ["angular", "react", "typescript"]
+  },
+  {
+    "title": "Product Design & UX/UI",
+    "description": "Designing inclusive interfaces and high-fidelity visual systems, ensuring accessibility and usability under WCAG standards.",
+    "icons": ["figma", "ux-ui", "w3c"]
+  },
+  {
+    "title": "Web Layout & Styling",
+    "description": "Agile and optimized layout using utility-first methodologies for a consistent, high-performance visual development.",
+    "icons": ["tailwind", "sass", "css3"]
+  },
+  {
+    "title": "Databases",
+    "description": "Persistent data management using NoSQL databases to support modern and dynamic applications.",
+    "icons": ["mongodb", "firebase"]
+  },
+  {
+    "title": "Agile Project Management",
+    "description": "Efficient project management under agile methodologies, maintaining version control and impeccable technical documentation.",
+    "icons": ["jira", "github", "notion"]
+  },
+
+],
 projectsTitle: 'Projects',
 projects :[
 

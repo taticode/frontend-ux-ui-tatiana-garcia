@@ -12,6 +12,42 @@ hero: {
     subtitle: 'Desarrollo aplicaciones web con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario',
     buttonProjects: 'Ver Proyectos'
 },
+aboutMeTitle: 'Sobre mí',
+
+aboutMe: [
+      {
+      "title": "Integración de IA",
+      "description": "Optimización de la productividad mediante la integración de IA generativa en todo el ciclo de diseño y desarrollo.",
+      "icons": ["chatgpt", "gemini", "claude"]
+    },
+        {
+      "title": "Arquitectura Frontend",
+      "description": "Arquitectura de aplicaciones robustas y escalables mediante tipado estricto y el uso de los frameworks más potentes del ecosistema actual.",
+      "icons": ["angular", "react", "typescript"]
+    },
+    {
+      "title": "Diseño de producto y UX/UI",
+      "description": "Diseño de interfaces inclusivas y sistemas visuales de alta fidelidad, garantizando accesibilidad y usabilidad bajo estándares WCAG.",
+      "icons": ["figma", "ux-ui", "w3c"]
+    },
+    {
+      "title": "Maquetación",
+      "description": "Maquetación ágil y optimizada con metodologías de utilidades para un desarrollo visual coherente y de alto rendimiento.",
+      "icons": ["tailwind", "sass", "css3"]
+    },
+
+    {
+      "title": "Bases de datos",
+      "description": "Gestión de datos persistentes mediante bases de datos NoSQL para el soporte de aplicaciones dinámicas y modernas.",
+      "icons": ["mongodb", "firebase"]
+    },
+    {
+      "title": "Gestión Agile de proyectos",
+      "description": "Gestión eficiente de proyectos bajo metodologías ágiles, manteniendo el control de versiones y una documentación técnica impecable.",
+      "icons": ["jira", "github", "notion"]
+    },
+
+  ],
 projectsTitle: 'Proyectos',
 projects :[
 

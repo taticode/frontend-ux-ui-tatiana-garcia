@@ -66,6 +66,12 @@
   button { transition: font-weight 0.2s ease, border-color 0.3s ease; }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* --- CAMBIO DE ICONO BURGUER A CROSS --- */
 .menu-btn {
     z-index: 2;
@@ -96,19 +102,42 @@
   }
 }
 
+.btn-disabled {
+  @apply opacity-40 grayscale pointer-events-none cursor-not-allowed border-gray-300 text-gray-400 bg-gray-50;
+  transform: none !important; /* Evita la animación de subida */
+  box-shadow: none !important;
+}
+
 .main-button {
   @apply inline-flex items-center text-sm box-border border rounded-xl px-4 py-2.5 leading-5 
-         transition-all duration-300 ease-in-out
-         focus:outline-none focus:ring-1 hover:bg-brand-background-brown;
+         transition-all duration-300 ease-in-out font-semibold
+         focus:outline-none focus:ring-1;
 
   &:hover {
     @apply -translate-y-1 scale-[1.02] shadow-lg;
-    
+  }
+
+  /* Variante Verde */
+  &.btn-green {
+    @apply bg-brand-primary-green border-brand-text-green text-brand-text-black;
+    &:hover { @apply bg-brand-text-green text-brand-text-white; }
+  }
+
+  /* Variante Marrón */
+  &.btn-brown {
+    @apply bg-brand-primary-brown/50 border-brand-text-brown text-brand-text-brown;
+    &:hover { @apply bg-brand-text-white; }
+  }
+
+  /* Variante Naranja */
+  &.btn-orange {
+    @apply bg-brand-primary-orange/40 border-brand-background-orange text-brand-text-brown;
+    &:hover { @apply bg-brand-background-orange; }
   }
 }
 
 .badge-pill {
-  @apply text-sm font-medium px-3 py-1 rounded-full leading-normal text-brand-text-brown bg-brand-background-brown;
+  @apply text-sm uppercase font-medium px-4 py-2 rounded-full leading-normal text-brand-text-brown bg-brand-background-brown;
 }
 
 .clickable-card {

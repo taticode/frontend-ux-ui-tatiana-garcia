@@ -2,10 +2,12 @@ import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header';
 import { ProjectsComponent } from './components/projects/projects';
+import { AboutMeComponent } from './components/about-me/about-me';
 import { ExperienceComponent } from './components/experience/experience';
 import { ContactComponent } from './components/contact/contact';
 import { FooterComponent } from './components/footer/footer';
 import { initFlowbite } from 'flowbite';
+
 
 
 @Component({
@@ -16,6 +18,7 @@ import { initFlowbite } from 'flowbite';
     RouterModule,
     HeaderComponent,
     ProjectsComponent,
+    AboutMeComponent,
     ExperienceComponent,
     ContactComponent,
     FooterComponent,
