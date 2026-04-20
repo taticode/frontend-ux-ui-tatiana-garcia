@@ -55,30 +55,24 @@ projects :[
     title: `Memory cards`,
     description: 'A card game for pairs to learn vocabulary in English about food, objects, or places.',
     tags: ['Javascript', 'css3'],
-    buttonDemo: 'Demo',
     link: 'https://taticode.github.io/memory-game/',
-    buttonGit: 'Github',
     gitRepo: 'https://github.com/taticode/memory-game'
 },
 {
     thumbnail:'assets/images/myaura.png',
     title: 'Future project',
     description: 'Here you can see the future projects that I will be publishing.',
-    tags: ['tech'],
-    buttonDemo: '',
+    tags: '',
     link:'',
-    buttonGit: '',
     gitRepo:''
 },
 {
     thumbnail:'assets/images/myaura.png',
     title: 'Future project',
     description: 'Here you can see the future projects that I will be publishing.',
-    tags: ['tech'],
-    buttonDemo: '',
-    link: '',
-    buttonGit: '',
-    gitRepo: ''
+    tags: '',
+    link:'',
+    gitRepo:''
 },
 ],
 projectsEmpty: 'There are no projects to show',

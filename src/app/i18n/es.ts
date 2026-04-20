@@ -56,29 +56,23 @@ projects :[
     title: `Memory cards`,
     description: 'Juego de cartas por parejas para aprender vocabulario en inglés sobre comida, objetos o lugares',
     tags: ['Javascript', 'css3'],
-    buttonDemo: 'Demo',
     link: 'https://taticode.github.io/memory-game/',
-    buttonGit: 'Github',
     gitRepo: 'https://github.com/taticode/memory-game?tab=readme-ov-file'
 },
 {
     thumbnail:'assets/images/myaura.png',
     title: 'Proyecto futuro',
     description: 'Aquí podrás ver los futuros proyectos que iré publicando',
-    tags: ['tecnologías'],
-    buttonDemo: '',
-    link: '',
-    buttonGit: '',
-    gitRepo: ''
+    tags: '',
+    link:'',
+    gitRepo:''
 },
 {
     thumbnail:'assets/images/myaura.png',
     title: 'Proyecto futuro',
     description: 'Aquí podrás ver los futuros proyectos que iré publicando',
-    tags: ['tecnologías'],
-    buttonDemo: '',
-    link: '',
-    buttonGit: '',
+    tags: '',
+    link:'',
     gitRepo:''
 },
 

@@ -102,24 +102,23 @@ img {
 }
 
 .btn-disabled {
-  @apply opacity-40 grayscale pointer-events-none cursor-not-allowed border-gray-300 text-gray-400 bg-gray-50;
+  @apply opacity-40 grayscale pointer-events-none cursor-not-allowed text-gray-500 bg-gray-300;
   transform: none !important; /* Evita la animación de subida */
   box-shadow: none !important;
 }
 
 .main-button {
-  @apply inline-flex items-center text-sm box-border border rounded-xl px-4 py-2.5 leading-5 
-         transition-all duration-300 ease-in-out font-semibold
+  @apply inline-flex items-center text-sm rounded-xl px-4 py-2.5 leading-5 
+         transition-all duration-200 ease-in-out
          focus:outline-none focus:ring-1;
 
   &:hover {
-    @apply -translate-y-1 scale-[1.02] shadow-lg;
+    @apply -translate-y-0.5 scale-[1.01] shadow-md shadow-brand-text-green;
   }
 
   /* Variante Verde */
   &.btn-green {
     @apply bg-brand-primary-green border-brand-text-green text-brand-text-black;
-    &:hover { @apply bg-brand-text-green text-brand-text-white; }
   }
 
   /* Variante Marrón */
@@ -136,7 +135,7 @@ img {
 }
 
 .badge-pill {
-  @apply text-sm uppercase font-medium px-4 py-2 rounded-full leading-normal text-brand-text-brown bg-brand-background-brown;
+  @apply text-xs font-medium px-2 py-1 rounded-full leading-normal text-brand-text-brown bg-brand-background-brown;
 }
 
 .clickable-card {
