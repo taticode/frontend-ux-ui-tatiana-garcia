@@ -218,9 +218,12 @@ courses: [
   }
 ],
 positionsEmpty: 'No jobs to display',
+msg1: 'Would Tuesday work for you?',
+msg2: 'Perfect! I’m free for the interview around 10:00.',
+msg3: 'Great!, see you at 10:00 :)',
 contactTitle: 'Contact',
-contactSubtitle: `If you're looking for a hybrid profile for your project, contact me via LinkedIn or email me at:
-tatianagarcia.dev@gmail.com`,
+contactSubtitle: `Looking for a 360° vision for your next project?`,
+contactParagraph: `If you feel my profile aligns with your team, let's connect on LinkedIn or reach out directly via email at: tatianagarcia.dev@gmail.com`,
 footerClaim1: 'This portfolio was made with love',
 footerClaim2: 'And a lot of green tea',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - All rights reserved - This website does not collect any personal data from users'
