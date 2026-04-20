@@ -1,8 +1,18 @@
 import { Component, inject, signal, OnInit, ElementRef } from '@angular/core';
 import { LanguageService } from '../../services/language';
 import { TranslatePipe } from '../../pipes/translate-pipe';
+import { ICONS } from '../../shared/constants/icons';
 
 type ChatStatus = 'hidden' | 'typing' | 'shown';
+
+interface SocialLink {
+  href: string;
+  label: string;
+  iconKey: string;
+  svgFill: 'currentColor' | 'none';
+  strokeIcon: boolean;
+  external: boolean;
+}
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +24,13 @@ type ChatStatus = 'hidden' | 'typing' | 'shown';
 export class ContactComponent implements OnInit {
   langService = inject(LanguageService);
   private el = inject(ElementRef);
+  readonly icons = ICONS;
+
+  readonly socialLinks: SocialLink[] = [
+    { href: 'https://www.linkedin.com/in/tatianagarciafrontend/', label: 'LinkedIn', iconKey: 'linkedin', svgFill: 'currentColor', strokeIcon: false, external: true },
+    { href: 'mailto:tatianagarcia.dev@gmail.com', label: 'Mail', iconKey: 'mail', svgFill: 'none', strokeIcon: true, external: false },
+    { href: 'https://github.com/taticode', label: 'Github', iconKey: 'github', svgFill: 'currentColor', strokeIcon: false, external: true },
+  ];
 
   // Estados de los mensajes
   statusMsg1 = signal<ChatStatus>('hidden');
@@ -34,7 +51,6 @@ export class ContactComponent implements OnInit {
       },
       { threshold: 0.4 } // Comienza cuando el 40% del contacto es visible
     );
-
     observer.observe(this.el.nativeElement);
   }
 

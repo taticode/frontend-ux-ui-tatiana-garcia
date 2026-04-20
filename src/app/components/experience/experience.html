@@ -38,7 +38,7 @@
           </div>
 
           <section class="pl-10 md:pl-4 py-4">
-            <div class="clickable-card" [class.green]="item.type === 'course'">
+            <div class="clickable-card main-animation" [class.green]="item.type === 'course'">
               
               <h2 [id]="'heading-' + $index" class="m-0">
                 <button type="button" 
@@ -53,7 +53,7 @@
                   </span>
 
                   <svg data-accordion-icon class="w-4 h-4 shrink-0 transition-transform duration-300 text-brand-text-black/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="icons['chevronDown']"/>
                   </svg>
                 </button>
               </h2>

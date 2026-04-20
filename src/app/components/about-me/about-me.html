@@ -3,96 +3,39 @@
     <h3 class="text-4xl w-full pt-8 pb-6 text-brand-text-black">{{'aboutMeTitle' | translate}}</h3>
 
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3">
-      
-      <div class="relative lg:row-span-2 group overflow-hidden rounded-lg lg:rounded-none lg:rounded-tl-4xl">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg lg:rounded-none lg:rounded-tl-4xl"></div>
-        <div class="relative flex h-full flex-col justify-between p-8">
-          <div>
-            <p class="text-xl font-bold text-gray-950 mb-4">{{ aboutMeData[0].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[0].description }}</p>
-          </div>
-          <div class="flex gap-3 mt-6">
-            @for (icon of aboutMeData[0].icons; track icon) {
-              <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-            }
-          </div>
-        </div>
-      </div>
 
-      <div class="relative group overflow-hidden rounded-lg">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg"></div>
-        <div class="relative flex h-full flex-col justify-between p-8">
-          <div>
-            <p class="text-xl font-bold text-gray-950 mb-2">{{ aboutMeData[1].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[1].description }}</p>
-          </div>
-          <div class="flex gap-3 mt-4">
-            @for (icon of aboutMeData[1].icons; track icon) {
-              <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-            }
-          </div>
-        </div>
-      </div>
+      @for (card of aboutMeData; track $index; let i = $index) {
+        <div class="relative group overflow-hidden rounded-lg" [ngClass]="layoutClasses[i].outer">
+          <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg" [ngClass]="layoutClasses[i].outer"></div>
+          <div class="relative flex h-full justify-between p-8" [ngClass]="layoutClasses[i].inner">
 
-      <div class="relative lg:row-span-2 group overflow-hidden rounded-lg lg:rounded-none lg:rounded-tr-4xl">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg lg:rounded-none lg:rounded-tr-4xl"></div>
-        <div class="relative flex h-full flex-col justify-between p-8">
-          <div>
-            <p class="text-xl font-bold text-gray-950 mb-4">{{ aboutMeData[2].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[2].description }}</p>
-          </div>
-          <div class="flex gap-4 mt-6">
-            @for (icon of aboutMeData[2].icons; track icon) {
-              <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+            @if (layoutClasses[i].contentWrap) {
+              <div class="max-w-md">
+                <p class="text-xl font-bold text-gray-950" [ngClass]="layoutClasses[i].mb">{{ card.title }}</p>
+                <p class="text-sm/6 text-gray-600">{{ card.description }}</p>
+                <div class="flex gap-3" [ngClass]="layoutClasses[i].mt">
+                  @for (icon of card.icons; track icon) {
+                    <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon"
+                         class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+                  }
+                </div>
+              </div>
+            } @else {
+              <div>
+                <p class="text-xl font-bold text-gray-950" [ngClass]="layoutClasses[i].mb">{{ card.title }}</p>
+                <p class="text-sm/6 text-gray-600">{{ card.description }}</p>
+              </div>
+              <div class="flex gap-3" [ngClass]="layoutClasses[i].mt">
+                @for (icon of card.icons; track icon) {
+                  <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon"
+                       class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+                }
+              </div>
             }
-          </div>
-        </div>
-      </div>
 
-      <div class="relative group overflow-hidden rounded-lg">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg"></div>
-        <div class="relative flex h-full flex-col justify-between p-8">
-          <div>
-            <p class="text-xl font-bold text-gray-950 mb-2">{{ aboutMeData[3].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[3].description }}</p>
-          </div>
-          <div class="flex gap-3 mt-4">
-            @for (icon of aboutMeData[3].icons; track icon) {
-              <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-            }
           </div>
         </div>
-      </div>
-
-      <div class="relative lg:col-span-2 group overflow-hidden rounded-lg lg:rounded-none lg:rounded-bl-4xl">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg lg:rounded-none lg:rounded-bl-4xl"></div>
-        <div class="relative flex h-full flex-col sm:flex-row items-end justify-between p-8">
-          <div class="max-w-md">
-            <p class="text-xl font-bold text-gray-950 mb-2">{{ aboutMeData[4].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[4].description }}</p>
-            <div class="flex gap-3 mt-4">
-              @for (icon of aboutMeData[4].icons; track icon) {
-                <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-              }
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative group overflow-hidden rounded-lg lg:rounded-none lg:rounded-br-4xl">
-        <div class="absolute inset-px bg-brand-text-white shadow-sm border border-brand-background-brown rounded-lg lg:rounded-none lg:rounded-br-4xl"></div>
-        <div class="relative flex h-full flex-col justify-between p-8">
-          <div>
-            <p class="text-xl font-bold text-gray-950 mb-2">{{ aboutMeData[5].title }}</p>
-            <p class="text-sm/6 text-gray-600">{{ aboutMeData[5].description }}</p>
-          </div>
-          <div class="flex gap-3 mt-4">
-            @for (icon of aboutMeData[5].icons; track icon) {
-              <img [src]="'assets/icons/' + icon + '.svg'" [alt]="icon" class="p-2 ring-1 ring-brand-background-brown w-12 h-12 rounded-2xl grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
-            }
-          </div>
-        </div>
-      </div>
+      }
 
     </div>
   </div>

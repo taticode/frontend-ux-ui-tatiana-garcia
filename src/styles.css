@@ -46,9 +46,6 @@
   background: linear-gradient(to bottom, transparent 0%, var(--color-brand-background-global) 100%);
 }
 
-@utility main-animation {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* --- BASE --- */
 @layer base {
@@ -101,6 +98,26 @@ img {
   }
 }
 
+.main-animation {
+  /* Estado base: como quieres que esté el botón en reposo */
+  @apply transition-all duration-300 ease-out;
+  
+  /* Estado Hover: el corazón de la interacción */
+  &:hover {
+    @apply -translate-y-0.5 scale-[1.02] shadow-md outline-none;
+  }
+
+  /* Estado Focus: para accesibilidad con teclado */
+  &:focus {
+    @apply ring-2 ring-offset-2 ring-green-500 outline-none;
+  }
+
+  /* Estado Active: feedback cuando el usuario hace clic */
+  &:active {
+    @apply scale-95 duration-100;
+  }
+}
+
 .btn-disabled {
   @apply opacity-40 grayscale pointer-events-none cursor-not-allowed text-gray-500 bg-gray-300;
   transform: none !important; /* Evita la animación de subida */
@@ -108,29 +125,26 @@ img {
 }
 
 .main-button {
-  @apply inline-flex items-center text-sm rounded-xl px-4 py-2.5 leading-5 
-         transition-all duration-200 ease-in-out
-         focus:outline-none focus:ring-1;
-
-  &:hover {
-    @apply -translate-y-0.5 scale-[1.01] shadow-md shadow-brand-text-green;
-  }
+  @apply inline-flex items-center text-sm rounded-xl px-4 py-2.5 leading-5;
 
   /* Variante Verde */
   &.btn-green {
     @apply bg-brand-primary-green border-brand-text-green text-brand-text-black;
+      &:hover {
+    @apply shadow-brand-text-green;
+  }
   }
 
   /* Variante Marrón */
   &.btn-brown {
     @apply bg-brand-primary-brown/50 border-brand-text-brown text-brand-text-brown;
-    &:hover { @apply bg-brand-text-white; }
+    &:hover { @apply bg-brand-text-white shadow-brand-text-brown }
   }
 
   /* Variante Naranja */
   &.btn-orange {
     @apply bg-brand-primary-orange/40 border-brand-background-orange text-brand-text-brown;
-    &:hover { @apply bg-brand-background-orange; }
+    &:hover { @apply bg-brand-background-orange shadow-brand-primary-orange/40; }
   }
 }
 
@@ -139,10 +153,10 @@ img {
 }
 
 .clickable-card {
-  @apply block rounded-2xl overflow-hidden box-border bg-brand-text-white border border-brand-background-brown main-animation;
+  @apply block rounded-2xl overflow-hidden box-border bg-brand-text-white border border-brand-background-brown;
 
   &:hover {
-    @apply cursor-pointer border-brand-text-green scale-[1.01] -translate-y-1 shadow-brand flex flex-col;
+    @apply cursor-pointer border-brand-text-green flex flex-col;
   }
   
   &:hover * {

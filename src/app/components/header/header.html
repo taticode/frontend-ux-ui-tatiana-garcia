@@ -2,35 +2,34 @@
 <div id="hero" class="header">
   <div class="text-3xl fixed z-50 top-0 right-0 left-0 bg-brand-background-global border-b border-brand-background-brown">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-      
+
       <div class="text-xl font-bold tracking-tighter">
         [ TG ]
       </div>
       <div class="nav-wrapper">
           <div class="md:hidden">
 
-            <button 
+            <button
             (click)="toggleMenu()"
-            data-collapse-toggle="navbar-hamburger" 
-            type="button" 
-            class="relative h-10 w-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
-            aria-controls="navbar-hamburger" 
+            data-collapse-toggle="navbar-hamburger"
+            type="button"
+            aria-label="Open main menu"
+            class="relative h-10 w-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-hamburger"
             [attr.aria-expanded]="isMenuOpen">
-              
-              <span class="sr-only">Open main menu</span>
-              
+
               <div class="absolute left-1/2 top-1/2 w-6 -translate-x-1/2 -translate-y-1/2 transform">
-                <span 
+                <span
                   class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
                   [ngClass]="isMenuOpen ? 'rotate-45' : '-translate-y-2'">
                 </span>
-                
-                <span 
+
+                <span
                   class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
                   [ngClass]="{'opacity-0': isMenuOpen}">
                 </span>
-                
-                <span 
+
+                <span
                   class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
                   [ngClass]="isMenuOpen ? '-rotate-45' : 'translate-y-2'">
                 </span>
@@ -51,16 +50,17 @@
               @for (lang of languages; track lang; let last = $last) {
                 <button
                   (click)="langService.setLanguage(lang)"
+                  [attr.aria-label]="'Switch to ' + lang.toUpperCase()"
                   class="p-3 py-2 transition-all duration-200 cursor-pointer hover:text-shadow-bold"
                   [class.text-brand-text-green]="langService.currentLang() === lang"
                   [class.text-shadow-bold]="langService.currentLang() === lang">
                   {{ lang.toUpperCase() }}
                 </button>
                 @if (!last) { <span>|</span> }
-              } 
+              }
             </div>
           </div>
-          
+
       </div>
 
     </div>
@@ -76,10 +76,10 @@
           </h1>
           <h2 class="text-lg md:text-xl lg:text-2xl leading-relaxed pb-4"> {{'hero.job' | translate}} </h2>
           <p class="text-sm max-w-lg leading-relaxed pb-4"> {{'hero.subtitle' | translate}} </p>
-          <a href="#projects" class="main-button btn-green group">
+          <a href="#projects" aria-label="View projects" class="main-button btn-green group main-animation">
               {{'hero.buttonProjects' | translate}}
               <svg class="w-4 h-4 ms-1.5 rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="icons['arrow']"/>
               </svg>
           </a>
         </div>
@@ -87,4 +87,3 @@
     </div>
   </section>
 </div>
-

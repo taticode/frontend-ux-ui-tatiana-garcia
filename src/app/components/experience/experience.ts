@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language';
 import { TranslatePipe } from '../../pipes/translate-pipe';
 import { initFlowbite } from 'flowbite';
+import { ICONS } from '../../shared/constants/icons';
 
 // 1. Definimos la estructura de cada ítem
 interface TimelineItem {
@@ -31,6 +32,7 @@ interface TranslationData {
 
 export class ExperienceComponent {
   private langService = inject(LanguageService);
+  readonly icons = ICONS;
   filterSelected = signal<'all' | 'job' | 'course'>('all');
 
   // Botones de filtro

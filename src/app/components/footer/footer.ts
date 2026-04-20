@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '../../pipes/translate-pipe';
 import { LanguageService } from '../../services/language';
+import { ICONS } from '../../shared/constants/icons';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,6 @@ import { LanguageService } from '../../services/language';
   styleUrl: './footer.css',
 })
 export class FooterComponent {
-  langService = inject(LanguageService)
+  langService = inject(LanguageService);
+  readonly icons = ICONS;
 }
