@@ -36,6 +36,11 @@
   align-items: center;
   animation: message-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+@media screen and (max-width: 768px) {
+  .chat-bubble {
+    font-size: 0.48rem;
+  }
+}
 
 /* --- Lógica de typing Indicator --- */
 .typing-indicator {
@@ -64,7 +69,7 @@
 
 .tatiana-bubble {
   right: 15%;
-  top: 28%;
+  top: 27%;
   transform-origin: 100% 100%;
 }
 

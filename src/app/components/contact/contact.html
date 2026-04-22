@@ -5,7 +5,7 @@
 
       <div class="w-full space-y-6">
         <p class="text-lg md:text-xl lg:text-2xl leading-relaxed">{{'contactSubtitle' | translate}}</p>
-        <p class="text-sm max-w-lg pb-2">{{'contactParagraph' | translate}}</p>
+        <p class="text-md max-w-lg pb-2">{{'contactParagraph' | translate}}</p>
 
         @for (link of socialLinks; track link.label) {
           <a [href]="link.href"
