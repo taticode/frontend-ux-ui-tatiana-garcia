@@ -1,8 +1,8 @@
 
 export const EN = {
 nav: {
-        about: 'About me',
         projects: 'Projects',
+        about: 'About me',
         experience: 'Experience',
         contact: 'Contact'
     },
@@ -17,32 +17,32 @@ aboutMeTitle: 'About me',
 aboutMe: [
   {
     "title": "AI Integration",
-    "description": "Productivity optimization by integrating generative AI throughout the entire design and development lifecycle.",
+    "description": "Productivity optimization by integrating generative AI throughout the entire design and development lifecycle with Claude, Chatgpt and Gemini",
     "icons": ["chatgpt", "gemini", "claude"]
   },
   {
     "title": "Frontend Architecture",
-    "description": "Building robust and scalable applications through strict typing and the most powerful frameworks in the current ecosystem.",
+    "description": "Building robust and scalable applications with typescript and the most powerful frameworks in the current ecosystem, Angular and React.",
     "icons": ["angular", "react", "typescript"]
   },
   {
     "title": "Product Design & UX/UI",
-    "description": "Designing inclusive interfaces and high-fidelity visual systems, ensuring accessibility and usability under WCAG standards.",
+    "description": "Designing inclusive interfaces and visual systems on Figma, ensuring accessibility and usability under WCAG standards.",
     "icons": ["figma", "ux-ui", "w3c"]
   },
   {
     "title": "Web Layout & Styling",
-    "description": "Agile and optimized layout using utility-first methodologies for a consistent, high-performance visual development.",
+    "description": "Agile and optimized layout using Tailwind and utility-first methodologies for a consistent, high-performance visual development.",
     "icons": ["tailwind", "sass", "css3"]
   },
   {
     "title": "Databases",
-    "description": "Persistent data management using NoSQL databases to support modern and dynamic applications.",
+    "description": "Persistent data management using NoSQL databases to support modern and dynamic applications with Mongodb and Firebase",
     "icons": ["mongodb", "firebase"]
   },
   {
     "title": "Agile Project Management",
-    "description": "Efficient project management under agile methodologies, maintaining version control and impeccable technical documentation.",
+    "description": "Efficient project management under agile methodologies like Jira or Notion, Github version control management.",
     "icons": ["jira", "github", "notion"]
   },
 

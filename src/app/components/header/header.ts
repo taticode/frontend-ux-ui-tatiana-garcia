@@ -36,6 +36,7 @@ export class HeaderComponent implements AfterViewInit {
 
   navItems: NavItem[] = [
     { labelKey: 'nav.projects', link: '#projects' },
+    { labelKey: 'nav.about', link: '#about' },
     { labelKey: 'nav.experience', link: '#experience' },
     { labelKey: 'nav.contact', link: '#contact' },
   ];

@@ -37,7 +37,7 @@
             </button>
           </div>
 
-          <div class="h-screen hidden w-full md:flex md:w-auto items-center space-x-8 text-sm absolute md:relative top-full left-0 bg-brand-background-global md:bg-transparent p-6 md:p-0 md:border-none shadow-lg md:shadow-none" id="navbar-hamburger">
+          <div class="h-screen sm:h-auto hidden w-full md:flex md:w-auto items-center space-x-8 text-sm absolute md:relative top-full left-0 bg-brand-background-global md:bg-transparent p-6 md:p-0 md:border-none shadow-lg md:shadow-none" id="navbar-hamburger">
             <nav class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
               @for (item of navItems; track $index) {
                 <a [href]="item.link" class="hover:text-shadow-bold transition px-1">

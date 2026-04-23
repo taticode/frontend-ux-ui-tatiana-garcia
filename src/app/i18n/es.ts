@@ -2,14 +2,15 @@
 export const ES = {
 nav: {
         projects: 'Proyectos',
+        about: 'Sobre mí',
         experience: 'Experiencia',
         contact: 'Contacto'
     },
 hero: {
     title: '¡Hola! Soy ',
     nameSpan: 'Tatiana García',
-    job: 'Frontend developer con conocimientos UX/UI',
-    subtitle: 'Desarrollo aplicaciones web con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario',
+    job: 'Frontend developer con conocimientos UX/UI.',
+    subtitle: 'Desarrollo aplicaciones web con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario.',
     buttonProjects: 'Ver Proyectos'
 },
 aboutMeTitle: 'Sobre mí',
@@ -17,33 +18,33 @@ aboutMeTitle: 'Sobre mí',
 aboutMe: [
       {
       "title": "Integración de IA",
-      "description": "Optimización de la productividad mediante la integración de IA generativa en todo el ciclo de diseño y desarrollo.",
-      "icons": ["chatgpt", "gemini", "claude"]
+      "description": "Optimización de la productividad mediante la integración de IA generativa en todo el ciclo de diseño y desarrollo con Claude, Chatgpt y Gemini.",
+      "icons": ["claude","chatgpt", "gemini"]
     },
         {
       "title": "Arquitectura Frontend",
-      "description": "Arquitectura de aplicaciones robustas y escalables mediante tipado estricto y el uso de los frameworks más potentes del ecosistema actual.",
+      "description": "Arquitectura de aplicaciones robustas y escalables con tyepscript y el uso de los frameworks más potentes del ecosistema actual, Angular y React.",
       "icons": ["angular", "react", "typescript"]
     },
     {
       "title": "Diseño de producto y UX/UI",
-      "description": "Diseño de interfaces inclusivas y sistemas visuales de alta fidelidad, garantizando accesibilidad y usabilidad bajo estándares WCAG.",
+      "description": "Diseño de interfaces inclusivas y sistemas visuales en Figma, garantizando accesibilidad y usabilidad bajo estándares WCAG.",
       "icons": ["figma", "ux-ui", "w3c"]
     },
     {
       "title": "Maquetación",
-      "description": "Maquetación ágil y optimizada con metodologías de utilidades para un desarrollo visual coherente y de alto rendimiento.",
+      "description": "Maquetación ágil con Tailwind y optimizada con metodologías de utilidades para un desarrollo visual coherente y de alto rendimiento.",
       "icons": ["tailwind", "sass", "css3"]
     },
 
     {
       "title": "Bases de datos",
-      "description": "Gestión de datos persistentes mediante bases de datos NoSQL para el soporte de aplicaciones dinámicas y modernas.",
+      "description": "Gestión de datos persistentes mediante bases de datos NoSQL para el soporte de aplicaciones dinámicas y modernas con Mongodb y Firebase",
       "icons": ["mongodb", "firebase"]
     },
     {
       "title": "Gestión Agile de proyectos",
-      "description": "Gestión eficiente de proyectos bajo metodologías ágiles, manteniendo el control de versiones y una documentación técnica impecable.",
+      "description": "Gestión eficiente de proyectos bajo metodologías ágiles con Jira o Notion y manejo del control de versiones en Github",
       "icons": ["jira", "github", "notion"]
     },
 
@@ -217,7 +218,7 @@ msg3: '¡Estupendo!, nos vemos a las 10:00 :)',
 contactTitle: 'Contacto',
 contactSubtitle: '¿Buscas una visión 360° para tu próximo proyecto?',
 contactParagraph: 'Si crees que mi perfil encaja con tu equipo, hablemos a través de LinkedIn o directamente en mi correo: tatianagarcia.dev@gmail.com',
-footerClaim1: 'Este portfolio se ha hecho con mucho',
+footerClaim1: 'Este portfolio se ha hecho con mucho amor',
 footerClaim2: 'Y mucho té verde',
 footerClaim3: '© 2026  Tatiana García - Frontend developer - Todos los derechos reservados - En esta web no se recoge ningún dato personal de usuarios'
 };
