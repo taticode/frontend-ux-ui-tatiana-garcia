@@ -1,4 +1,11 @@
-/* --- Animaciones --- */
+@media screen and (max-width: 400px){
+  .links-contact {
+    @apply grid-cols-1;
+  }
+  .main-button {
+      @apply m-auto w-full;
+    }
+}
 
 /* Animación "Pop"*/
 @keyframes message-pop {
@@ -28,9 +35,9 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 0.6rem;
   line-height: 1.4;
-  padding: 6px 10px;
+  padding: 6px;
   border-radius: 12px;
-  max-width: 48%;
+  max-width: 49%;
   white-space: normal;
   display: flex;
   align-items: center;
@@ -38,7 +45,8 @@
 }
 @media screen and (max-width: 768px) {
   .chat-bubble {
-    font-size: 0.48rem;
+    font-size: 0.53rem;
+    width: 48%;
   }
 }
 
