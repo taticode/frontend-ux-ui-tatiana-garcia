@@ -66,14 +66,7 @@ projects :[
     link:'',
     gitRepo:''
 },
-{
-    thumbnail:'assets/images/myaura.png',
-    title: 'Future project',
-    description: 'Here you can see the future projects that I will be publishing.',
-    tags: '',
-    link:'',
-    gitRepo:''
-},
+
 ],
 projectsEmpty: 'There are no projects to show',
 positionsTitle: 'Studies and Experience',
