@@ -43,7 +43,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/app/app.css"
+              "src/app/app.component.css"
             ]
           },
           "configurations": {

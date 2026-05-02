@@ -4,7 +4,6 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +13,6 @@ import { FooterComponent } from '../footer/footer.component';
     ExperienceComponent,
     ProjectsComponent,
     ContactComponent,
-    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
