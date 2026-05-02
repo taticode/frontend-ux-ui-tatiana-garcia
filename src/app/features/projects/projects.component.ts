@@ -16,8 +16,8 @@ interface Project {
   selector: 'app-projects',
   standalone: true,
   imports: [TranslatePipe],
-  templateUrl: './projects.html',
-  styleUrl: './projects.css',
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
   langService = inject(LanguageService);

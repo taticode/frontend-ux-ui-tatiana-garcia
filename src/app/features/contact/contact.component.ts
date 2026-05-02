@@ -18,8 +18,8 @@ interface SocialLink {
   selector: 'app-contact',
   standalone: true,
   imports: [TranslatePipe],
-  templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css',
 })
 export class ContactComponent implements OnInit {
   langService = inject(LanguageService);

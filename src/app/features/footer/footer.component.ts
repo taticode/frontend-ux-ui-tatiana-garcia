@@ -6,8 +6,8 @@ import { ICONS } from '../../shared/constants/icons';
 @Component({
   selector: 'app-footer',
   imports: [TranslatePipe],
-  templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css',
 })
 export class FooterComponent {
   langService = inject(LanguageService);

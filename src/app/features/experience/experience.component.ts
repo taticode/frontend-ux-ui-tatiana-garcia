@@ -19,15 +19,15 @@ interface TimelineItem {
 interface TranslationData {
   positions?: TimelineItem[];
   courses?: TimelineItem[];
-  [key: string]: any; 
+  [key: string]: any;
 }
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './experience.html',
-  styleUrl: './experience.css',
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.css',
 })
 
 export class ExperienceComponent {
@@ -59,7 +59,7 @@ export class ExperienceComponent {
 
       const [monthName, year] = parts;
       const formatter = new Intl.DateTimeFormat(currentLang, { month: 'long' });
-      
+
       const monthIndex = Array.from({ length: 12 }, (_, i) =>
         formatter.format(new Date(2000, i, 1))
       ).findIndex(m => m.toLowerCase() === monthName.toLowerCase());
@@ -68,7 +68,7 @@ export class ExperienceComponent {
     };
 
     return combinedData
-      .filter((item) => 
+      .filter((item) =>
         this.filterSelected() === 'all' || item.type === this.filterSelected()
       )
       .sort((a, b) => parseDate(b.startDate) - parseDate(a.startDate));

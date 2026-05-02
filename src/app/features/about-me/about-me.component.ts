@@ -6,8 +6,8 @@ import { TranslatePipe } from '../../pipes/translate-pipe';
 @Component({
   selector: 'app-about-me',
   imports: [TranslatePipe, NgClass],
-  templateUrl: './about-me.html',
-  styleUrl: './about-me.css',
+  templateUrl: './about-me.component.html',
+  styleUrl: './about-me.component.css',
 })
 export class AboutMeComponent {
   langService = inject(LanguageService);

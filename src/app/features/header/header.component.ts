@@ -14,8 +14,8 @@ interface NavItem {
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './header.html',
-  styleUrl: './header.css',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent implements AfterViewInit {
   readonly icons = ICONS;
