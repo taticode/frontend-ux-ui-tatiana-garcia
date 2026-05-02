@@ -1,5 +1,5 @@
+import { HeroComponent } from './../hero/hero.component';
 import { Component } from '@angular/core';
-import { HeroComponent } from '../hero/hero.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { ExperienceComponent } from '../experience/experience.component';
