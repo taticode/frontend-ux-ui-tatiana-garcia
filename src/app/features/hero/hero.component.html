@@ -1,0 +1,23 @@
+
+<div class="header">
+
+  <section class="relative min-h-screen flex items-center ">
+    <div class="relative max-w-7xl mx-auto px-4 md:px-6 w-full grid grid-cols-1 gap-8">
+      <div class="space-y-6">
+        <div class="inline-block">
+          <h1 class="mb-4 text-4xl tracking-tight text-heading md:text-5xl lg:text-7xl">
+           {{'hero.title' | translate}}<span class="text-brand-text-green">{{'hero.nameSpan'  | translate}}</span>
+          </h1>
+          <h2 class="text-lg md:text-xl lg:text-2xl leading-relaxed pb-4"> {{'hero.job' | translate}} </h2>
+          <p class="text-md max-w-lg leading-relaxed pb-4"> {{'hero.subtitle' | translate}} </p>
+          <a href="#projects" aria-label="View projects" class="main-button btn-green group main-animation">
+              {{'hero.buttonProjects' | translate}}
+              <svg class="w-4 h-4 ms-1.5 rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="icons['arrow']"/>
+              </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

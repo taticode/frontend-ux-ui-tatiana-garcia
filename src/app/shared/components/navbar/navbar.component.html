@@ -1,0 +1,68 @@
+
+<div id="mainNav">
+  <div class="text-3xl fixed z-50 top-0 right-0 left-0 bg-brand-background-global border-b border-brand-background-brown">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center h-16">
+
+      <div class="text-xl font-bold tracking-tighter">
+        [ TG ]
+      </div>
+      <div class="nav-wrapper">
+          <div class="md:hidden">
+            <button
+            (click)="toggleMenu()"
+            data-collapse-toggle="navbar-hamburger"
+            type="button"
+            aria-label="Open main menu"
+            class="relative h-10 w-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-hamburger"
+            [attr.aria-expanded]="isMenuOpen">
+
+              <div class="absolute left-1/2 top-1/2 w-6 -translate-x-1/2 -translate-y-1/2 transform">
+                <span
+                  class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
+                  [ngClass]="isMenuOpen ? 'rotate-45' : '-translate-y-2'">
+                </span>
+
+                <span
+                  class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
+                  [ngClass]="{'opacity-0': isMenuOpen}">
+                </span>
+
+                <span
+                  class="absolute block h-0.5 w-6 transform bg-current transition duration-300 ease-in-out"
+                  [ngClass]="isMenuOpen ? '-rotate-45' : 'translate-y-2'">
+                </span>
+              </div>
+            </button>
+          </div>
+
+          <div class="h-screen sm:h-auto hidden w-full md:flex md:w-auto items-center space-x-8 text-sm absolute md:relative top-full left-0 bg-brand-background-global md:bg-transparent p-6 md:p-0 md:border-none shadow-lg md:shadow-none" id="navbar-hamburger">
+            <nav class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+              @for (item of navItems; track $index) {
+                <a [href]="item.link" class="hover:text-shadow-bold transition px-1">
+                  {{ item.labelKey | translate }}
+                </a>
+              }
+            </nav>
+
+            <div class="toggleLang flex items-center mt-4 md:mt-0">
+              @for (lang of languages; track lang; let last = $last) {
+                <button
+                  (click)="langService.setLanguage(lang)"
+                  [attr.aria-label]="'Switch to ' + lang.toUpperCase()"
+                  class="p-3 py-2 transition-all duration-200 cursor-pointer hover:text-shadow-bold"
+                  [class.text-brand-text-green]="langService.currentLang() === lang"
+                  [class.text-shadow-bold]="langService.currentLang() === lang">
+                  {{ lang.toUpperCase() }}
+                </button>
+                @if (!last) { <span>|</span> }
+              }
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
