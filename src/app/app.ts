@@ -1,11 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header';
-import { ProjectsComponent } from './components/projects/projects';
-import { AboutMeComponent } from './components/about-me/about-me';
-import { ExperienceComponent } from './components/experience/experience';
-import { ContactComponent } from './components/contact/contact';
-import { FooterComponent } from './components/footer/footer';
+import { HeaderComponent } from './features/header/header';
+import { ProjectsComponent } from './features/projects/projects';
+import { AboutMeComponent } from './features/about-me/about-me';
+import { ExperienceComponent } from './features/experience/experience';
+import { ContactComponent } from './features/contact/contact';
+import { FooterComponent } from './features/footer/footer';
 import { initFlowbite } from 'flowbite';
 
 
@@ -24,7 +24,7 @@ import { initFlowbite } from 'flowbite';
     FooterComponent,
   ],
 
-  templateUrl: './app.html', 
+  templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class AppComponent implements AfterViewInit {
