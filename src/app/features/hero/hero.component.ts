@@ -5,19 +5,16 @@ import { LanguageService } from '../../services/language';
 import { initFlowbite } from 'flowbite';
 import { ICONS } from '../../shared/constants/icons';
 
-interface NavItem {
-  labelKey: string;
-  link: string;
-}
+
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.css',
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeroComponent implements AfterViewInit {
   readonly icons = ICONS;
   isMenuOpen = false;
 
@@ -31,13 +28,7 @@ export class HeaderComponent implements AfterViewInit {
   }
   langService = inject(LanguageService);
 
-  //Selector de idiomas
-  languages = ['es', 'en'] as const;
 
-  navItems: NavItem[] = [
-    { labelKey: 'nav.projects', link: '#projects' },
-    { labelKey: 'nav.about', link: '#about' },
-    { labelKey: 'nav.experience', link: '#experience' },
-    { labelKey: 'nav.contact', link: '#contact' },
-  ];
+
+
 }
