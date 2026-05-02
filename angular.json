@@ -8,14 +8,21 @@
     ]
   },
   "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "css"
+    }
+  },
   "projects": {
     "mi-portfolio": {
       "projectType": "application",
       "schematics": {
-          "@schematics/angular:component": {
-          "style": "css",
-          "skipTests": false
-        }
+        "@schematics/angular:component": {
+            "style": "css",
+            "skipTests": false,
+            "flat": false,
+            "type": "component"
+          }
       },
       "root": "",
       "sourceRoot": "src",
