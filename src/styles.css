@@ -73,7 +73,7 @@ img {
     z-index: 2;
     text-align: center;
     border-radius: 50%;
-    color: var(--color-brand-text-black); /* Usa tus variables del theme */
+    color: var(--color-brand-text-black);
     display: flex;
     align-items: center;
     justify-content: center;
