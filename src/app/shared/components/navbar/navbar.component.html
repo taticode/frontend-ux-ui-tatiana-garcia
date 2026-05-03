@@ -51,7 +51,7 @@
                   (click)="langService.setLanguage(lang)"
                   [attr.aria-label]="'Switch to ' + lang.toUpperCase()"
                   class="p-3 py-2 transition-all duration-200 cursor-pointer hover:text-shadow-bold"
-                  [class.text-brand-text-green]="langService.currentLang() === lang"
+                  [class.text-brand-text-orange]="langService.currentLang() === lang"
                   [class.text-shadow-bold]="langService.currentLang() === lang">
                   {{ lang.toUpperCase() }}
                 </button>

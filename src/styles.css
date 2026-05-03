@@ -11,19 +11,23 @@
   /* Colores */
   --color-brand-primary-beige: #FEFAF2;
   --color-brand-primary-brown: #E5DACD;
-  --color-brand-primary-green: #DEE8D6;
+  --color-brand-primary-blue: #5d93c8;
   --color-brand-primary-orange: #FFD7B9;
   --color-brand-secondary-rose: #ffcfd1;
+  --color-brand-primary-green: #dcfcc4;
 
   --color-brand-text-black: #333;
-  --color-brand-text-white: #FEFDFD;
+  --color-brand-text-white: #FFF;
   --color-brand-text-brown: #4B4033;
-  --color-brand-text-green: #2C6E49;
+  --color-brand-text-blue: #5d93c8;
+  --color-brand-text-orange: #f8820c;
+    --color-brand-text-green: #a0ba8d;
 
   --color-brand-background-global: var(--color-brand-primary-beige);
   --color-brand-background-brown: var(--color-brand-primary-brown);
-  --color-brand-background-green: var(--color-brand-primary-green);
+  --color-brand-background-blue: var(--color-brand-primary-blue);
   --color-brand-background-orange: var(--color-brand-primary-orange);
+  --color-brand-background-green: var(--colro-brand-primary-green);
 
   --color-brand-border-brown: #B8A48B;
 
@@ -38,6 +42,9 @@
   transition: all .2s;
 }
 
+@utility gradient-orange-blue {
+  background: linear-gradient(to bottom, transparent 0%, var(--color-brand-background-orange) 25%, var(--color-brand-background-blue) 75%, transparent 100%);
+}
 @utility gradient-orange-green {
   background: linear-gradient(to bottom, transparent 0%, var(--color-brand-background-orange) 25%, var(--color-brand-background-green) 75%, transparent 100%);
 }
@@ -85,17 +92,8 @@ img {
 .header {
   position: relative;
   background-image: var(--image-header-hero);
-  @apply bg-contain bg-no-repeat bg-right;
+  @apply bg-cover bg-no-repeat bg-right;
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    @apply gradient-transparent-global;
-  }
 }
 
 .main-animation {
@@ -109,7 +107,7 @@ img {
 
   /* Estado Focus: para accesibilidad con teclado */
   &:focus {
-    @apply ring-2 ring-offset-2 ring-green-500 outline-none;
+    @apply ring-2 ring-offset-2 ring-blue-500 outline-none;
   }
 
   /* Estado Active: feedback cuando el usuario hace clic */
@@ -125,26 +123,25 @@ img {
 }
 
 .main-button {
-  @apply inline-flex items-center text-sm rounded-xl px-4 py-2.5 leading-5;
-
-  /* Variante Verde */
-  &.btn-green {
-    @apply bg-brand-primary-green border-brand-text-green text-brand-text-black;
+  @apply inline-flex items-center rounded-xl px-5 py-3 leading-6;
       &:hover {
-    @apply shadow-brand-text-green;
-  }
+        @apply shadow-brand-text-brown/20 text-shadow-bold;
+      }
+
+  /* Variante azul */
+  &.btn-blue {
+    @apply bg-brand-primary-blue border-brand-text-blue text-brand-text-white ;
   }
 
   /* Variante Marrón */
   &.btn-brown {
-    @apply bg-brand-primary-brown/50 border-brand-text-brown text-brand-text-brown;
-    &:hover { @apply bg-brand-text-white shadow-brand-text-brown }
+    @apply bg-brand-primary-brown/50 border-brand-text-brown text-brand-text-black;
+
   }
 
   /* Variante Naranja */
   &.btn-orange {
-    @apply bg-brand-primary-orange/40 border-brand-background-orange text-brand-text-brown;
-    &:hover { @apply bg-brand-background-orange shadow-brand-primary-orange/40; }
+    @apply bg-brand-background-orange border-brand-text-brown text-brand-text-black;
   }
 }
 
@@ -156,15 +153,18 @@ img {
   @apply block rounded-2xl overflow-hidden box-border bg-brand-text-white border border-brand-background-brown;
 
   &:hover {
-    @apply cursor-pointer border-brand-text-green flex flex-col;
+    @apply cursor-pointer shadow-brand-background-brown flex flex-col;
   }
 
   &:hover * {
     @apply cursor-pointer;
   }
 
-  &.green {
-    @apply bg-brand-primary-green;
+  &.blue {
+    @apply bg-brand-primary-blue text-brand-text-white;
+  }
+  &.orange {
+    @apply bg-brand-background-orange;
   }
 }
 
