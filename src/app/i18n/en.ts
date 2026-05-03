@@ -7,7 +7,8 @@ nav: {
         contact: 'Contact'
     },
 hero: {
-    title: 'Hi! ',
+    title: 'Hi!',
+    titleEmoji: ' 👋 ',
     nameSpan: 'I am Tatiana García',
     job: 'I am Frontend developer with UX/UI knowledge',
     subtitle: 'I build angular apps focused on clean architecture, accesibility and great user experience',
@@ -50,7 +51,7 @@ aboutMe: [
 projectsTitle: 'Projects',
 projects :[
 
-  {   
+  {
     thumbnail:'assets/images/memory.png',
     title: `Memory cards`,
     description: 'A card game for pairs to learn vocabulary in English about food, objects, or places.',

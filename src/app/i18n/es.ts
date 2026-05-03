@@ -7,8 +7,9 @@ nav: {
         contact: 'Contacto'
     },
 hero: {
-    title: '¡Hola! Soy ',
-    nameSpan: 'Tatiana García',
+    title: '¡Hola!',
+    titleEmoji: ' 👋 ',
+    nameSpan: 'Soy Tatiana García',
     job: 'Frontend developer con conocimientos UX/UI.',
     subtitle: 'Desarrollo aplicaciones web con foco en arquitectura limpia, accesibilidad y una buena experiencia de usuario.',
     buttonProjects: 'Ver Proyectos'
@@ -52,7 +53,7 @@ aboutMe: [
 projectsTitle: 'Proyectos',
 projects :[
 
-{   
+{
     thumbnail:'assets/images/memory.png',
     title: `Memory cards`,
     description: 'Juego de cartas por parejas para aprender vocabulario en inglés sobre comida, objetos o lugares',

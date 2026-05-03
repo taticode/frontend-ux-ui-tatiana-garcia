@@ -36,7 +36,7 @@
                            [target]="project.link ? '_blank' : '_self'"
                            [attr.aria-label]="'Demo: ' + project.title"
                            [attr.aria-disabled]="!project.link || null"
-                           [class.btn-green]="project.link"
+                           [class.btn-orange]="project.link"
                            [class.btn-disabled]="!project.link"
                            rel="noopener noreferrer nofollow">
                             <svg class="w-5 h-5 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@
                            [target]="project.gitRepo ? '_blank' : '_self'"
                            [attr.aria-label]="'GitHub: ' + project.title"
                            [attr.aria-disabled]="!project.gitRepo || null"
-                           [class.btn-green]="project.gitRepo"
+                           [class.btn-orange]="project.gitRepo"
                            [class.btn-disabled]="!project.gitRepo"
                            rel="noopener noreferrer nofollow">
                             <svg class="w-5 h-5 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">

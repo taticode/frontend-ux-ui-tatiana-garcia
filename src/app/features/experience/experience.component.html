@@ -1,8 +1,8 @@
 
 
-<section id="experience" class="w-full bg-brand-background-global">
+<section id="experience" class="w-full">
   <div class="max-w-7xl mx-auto px-4 md:px-6">
-    
+
     <h3 class="text-4xl w-full pt-8 pb-6 text-brand-text-black">
       {{ 'positionsTitle' | translate }}
     </h3>
@@ -11,8 +11,8 @@
       @for (filter of filters; track filter.id) {
         <button (click)="setFilter(filter.id)"
           class="mr-4 py-2 border-b-2 whitespace-nowrap transition-all hover:text-shadow-bold cursor-pointer"
-          [class]="filterSelected() === filter.id 
-            ? 'text-brand-text-green border-brand-text-green text-shadow-bold' 
+          [class]="filterSelected() === filter.id
+            ? 'text-brand-text-orange border-brand-text-orange text-shadow-bold'
             : 'border-transparent text-brand-text-black'">
           {{ filter.label | translate }}
         </button>
@@ -20,12 +20,12 @@
     </div>
 
     <div id="accordion-experience" data-accordion="collapse" class="max-w-7xl mx-auto relative">
-      
+
       @for (item of timelineList(); track $index; let first = $first; let last = $last) {
         <article class="grid grid-cols-[1fr_auto_2fr] w-full group overflow-visible"
                  [class.first-item]="first"
                  [class.last-item]="last">
-          
+
           <header class="flex items-center justify-end pr-10 md:pr-4 py-10 md:py-8">
             <span class="text-xs md:text-sm capitalize tracking-widest text-brand-text-black md:text-right leading-tight w-full">
               {{ item.startDate }} — {{ item.endDate }}
@@ -38,16 +38,16 @@
           </div>
 
           <section class="pl-10 md:pl-4 py-4">
-            <div class="clickable-card main-animation" [class.green]="item.type === 'course'">
-              
+            <div class="clickable-card main-animation" [class.orange]="item.type === 'course'">
+
               <h2 [id]="'heading-' + $index" class="m-0">
-                <button type="button" 
-                  class="flex items-center justify-between w-full p-5 text-left transition-colors gap-3 hover:bg-brand-primary-green/10" 
-                  [attr.data-accordion-target]="'#body-' + $index" 
+                <button type="button"
+                  class="flex items-center justify-between w-full p-5 text-left transition-colors gap-3 hover:bg-brand-primary-orange/10"
+                  [attr.data-accordion-target]="'#body-' + $index"
                   aria-expanded="false">
-                  
+
                   <span class="font-bold text-brand-text-black leading-tight">
-                    {{ item.company }} 
+                    {{ item.company }}
                     <span aria-hidden="true" class="hidden md:inline font-light text-brand-text-brown/50 mx-2">|</span>
                     <span class="block md:inline text-sm font-medium text-brand-text-black">{{ item.rol }}</span>
                   </span>
@@ -63,7 +63,7 @@
                   <ul class="space-y-3">
                     @for (p of item.description; track $index) {
                       <li class="flex gap-3 text-sm md:text-base text-brand-text-black/80">
-                        <span class="text-brand-text-green font-bold">•</span>
+                        <span class="font-bold">•</span>
                         {{ p }}
                       </li>
                     }
